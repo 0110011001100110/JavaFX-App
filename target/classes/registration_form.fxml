@@ -1,0 +1,104 @@
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.RadioButton?>
+
+<GridPane fx:controller="controller.RegistrationFormController"
+          xmlns:fx="http://javafx.com/fxml" alignment="center"
+          hgap="10" vgap="10">
+    <padding><Insets top="40" right="40" bottom="40" left="40"/></padding>
+    <columnConstraints>
+        <ColumnConstraints minWidth="100" prefWidth="100"
+                           maxWidth="Infinity" halignment="RIGHT">
+        </ColumnConstraints>
+        <ColumnConstraints minWidth="200" prefWidth="200"
+                           maxWidth="Infinity" hgrow="ALWAYS">
+        </ColumnConstraints>
+    </columnConstraints>
+
+
+    <!-- Add Header Label -->
+    <Label text="Registration Form" GridPane.columnIndex="0"
+           GridPane.rowIndex="0" GridPane.columnSpan="2"
+           GridPane.rowSpan="1" GridPane.halignment="CENTER" >
+        <font>
+            <Font name="Arial" size="24" ></Font>
+        </font>
+        <GridPane.margin>
+            <Insets top="20" right="0" bottom="20" left="0"></Insets>
+        </GridPane.margin>
+    </Label>
+
+
+    <!-- Add First Name Label -->
+    <Label text="First Name : " GridPane.columnIndex="0"
+                                GridPane.rowIndex="1" >
+    </Label>
+    <!-- Add First Name Text Field -->
+    <TextField fx:id="firstNameField" prefHeight="30"
+                                      GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+
+    <!-- Add Last Name Label -->
+    <Label text="Last Name : " GridPane.columnIndex="0"
+                               GridPane.rowIndex="2" >
+    </Label>
+    <!-- Add Last Name Text Field -->
+    <TextField fx:id="lastNameField" prefHeight="30"
+                                     GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+
+    <!-- Add User Name Label -->
+    <Label text="User Name : " GridPane.columnIndex="0"
+                               GridPane.rowIndex="3" >
+    </Label>
+    <!-- Add User Name Text Field -->
+    <TextField fx:id="userNameField" prefHeight="30"
+                                     GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+
+    <!-- Add Password Label -->
+    <Label text="Password : " GridPane.columnIndex="0"
+                              GridPane.rowIndex="4" >
+    </Label>
+    <!-- Add Password Field -->
+    <PasswordField fx:id="passwordField" prefHeight="30"
+                                         GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+
+
+    <!-- Add Birthday Label -->
+    <Label text="Birthday : "
+           GridPane.columnIndex="0" GridPane.rowIndex="5">
+
+    </Label>
+    <!-- Add Birthday Field -->
+    <DatePicker fx:id="dateOfBirth" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+
+    <!-- Add Gender Label -->
+    <Label text="Gender : " GridPane.columnIndex="0" GridPane.rowIndex="6" >
+    </Label>
+
+    <!-- Add Gender RadioButton -->
+    <RadioButton text="Female"  fx:id="female" onAction="#onRadioButtonClicked" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+    <RadioButton text="Male" fx:id="male" onAction="#onRadioButtonClicked" GridPane.columnIndex="1" GridPane.rowIndex="7"/>
+
+
+    <!-- Add Submit Button -->
+    <Button fx:id="submitButton" text="Sign Up"
+            prefWidth="100" prefHeight="40" defaultButton="true"
+            GridPane.columnIndex="0" GridPane.rowIndex="8"
+            GridPane.columnSpan="2" GridPane.rowSpan="2"
+            GridPane.halignment="RIGHT"
+            onAction="#handleSubmitButtonAction">
+        <GridPane.margin>
+            <Insets top="20" right="0" bottom="20" left="0"></Insets>
+        </GridPane.margin>
+    </Button>
+</GridPane>

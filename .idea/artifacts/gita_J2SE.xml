@@ -1,0 +1,25 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="gita_J2SE">
+    <output-path>$PROJECT_DIR$/out/artifacts/gita_J2SE</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="MainApp" />
+        <option name="description" value="" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="nativeBundle" value="all" />
+        <option name="title" value="" />
+        <option name="vendor" value="" />
+        <option name="version" value="" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="gita_J2SE.jar">
+        <element id="module-output" name="gita_J2SE" />
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
+        </element>
+        <element id="library" level="project" name="Maven: org.postgresql:postgresql:42.2.14" />
+      </element>
+    </root>
+  </artifact>
+</component>
